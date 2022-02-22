@@ -1,5 +1,35 @@
 package buckpal.application.port.in;
 
-public class SendMoneyCommand {
+import static java.util.Objects.*;
+
+import javax.validation.constraints.NotNull;
+
+import buckpal.common.SelfValidating;
+import buckpal.domain.Account;
+import buckpal.domain.Money;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
+
+@Value
+@EqualsAndHashCode(callSuper = false)
+public class SendMoneyCommand extends SelfValidating<SendMoneyCommand> {
+
+	@NotNull Account.AccountId sourceAccountId;
+	@NotNull Account.AccountId targetAccountId;
+	@NotNull Money money;
+
+	public SendMoneyCommand(
+		Account.AccountId sourceAccountId,
+		Account.AccountId targetAccountId,
+		Money money) {
+		this.sourceAccountId = sourceAccountId;
+		this.targetAccountId = targetAccountId;
+		this.money = money;
+
+		requireNonNull(sourceAccountId);
+		requireNonNull(targetAccountId);
+		requireNonNull(money);
+		this.validateSelf();
+	}
 
 }
