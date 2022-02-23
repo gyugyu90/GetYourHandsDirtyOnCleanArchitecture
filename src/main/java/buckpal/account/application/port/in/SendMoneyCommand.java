@@ -1,12 +1,12 @@
-package buckpal.application.port.in;
+package buckpal.account.application.port.in;
 
 import static java.util.Objects.*;
 
 import javax.validation.constraints.NotNull;
 
 import buckpal.common.SelfValidating;
-import buckpal.domain.Account;
-import buckpal.domain.Money;
+import buckpal.account.domain.Account;
+import buckpal.account.domain.Money;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 

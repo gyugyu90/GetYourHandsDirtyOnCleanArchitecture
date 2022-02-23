@@ -1,14 +1,14 @@
-package buckpal.application.port.in.web;
+package buckpal.account.adapter.in.web;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import buckpal.application.port.in.SendMoneyCommand;
-import buckpal.application.port.in.SendMoneyUseCase;
+import buckpal.account.application.port.in.SendMoneyCommand;
+import buckpal.account.application.port.in.SendMoneyUseCase;
 import buckpal.common.WebAdapter;
-import buckpal.domain.Account;
-import buckpal.domain.Money;
+import buckpal.account.domain.Account;
+import buckpal.account.domain.Money;
 import lombok.RequiredArgsConstructor;
 
 @WebAdapter

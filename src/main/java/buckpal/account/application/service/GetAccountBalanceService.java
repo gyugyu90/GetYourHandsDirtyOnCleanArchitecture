@@ -1,11 +1,11 @@
-package buckpal.application.service;
+package buckpal.account.application.service;
 
 import java.time.LocalDateTime;
 
-import buckpal.application.port.in.GetAccountBalanceQuery;
-import buckpal.application.port.out.LoadAccountPort;
-import buckpal.domain.Account;
-import buckpal.domain.Money;
+import buckpal.account.application.port.in.GetAccountBalanceQuery;
+import buckpal.account.application.port.out.LoadAccountPort;
+import buckpal.account.domain.Account;
+import buckpal.account.domain.Money;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

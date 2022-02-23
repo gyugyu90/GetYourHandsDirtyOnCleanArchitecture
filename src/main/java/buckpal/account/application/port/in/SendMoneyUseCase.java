@@ -1,4 +1,4 @@
-package buckpal.application.port.in;
+package buckpal.account.application.port.in;
 
 public interface SendMoneyUseCase {
 	boolean sendMoney(SendMoneyCommand command);

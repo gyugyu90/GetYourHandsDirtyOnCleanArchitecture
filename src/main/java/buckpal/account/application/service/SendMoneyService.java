@@ -1,9 +1,9 @@
-package buckpal.application.service;
+package buckpal.account.application.service;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import buckpal.application.port.in.SendMoneyCommand;
-import buckpal.application.port.in.SendMoneyUseCase;
+import buckpal.account.application.port.in.SendMoneyCommand;
+import buckpal.account.application.port.in.SendMoneyUseCase;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
