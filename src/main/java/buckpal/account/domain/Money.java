@@ -29,7 +29,23 @@ public class Money {
 		return new Money(this.amount.negate());
 	}
 
-	public boolean isPositive() {
-		return false;
+	public boolean isPositiveOrZero(){
+		return this.amount.compareTo(BigInteger.ZERO) >= 0;
+	}
+
+	public boolean isNegative(){
+		return this.amount.compareTo(BigInteger.ZERO) < 0;
+	}
+
+	public boolean isPositive(){
+		return this.amount.compareTo(BigInteger.ZERO) > 0;
+	}
+
+	public boolean isGreaterThanOrEqualTo(Money money){
+		return this.amount.compareTo(money.amount) >= 0;
+	}
+
+	public boolean isGreaterThan(Money money){
+		return this.amount.compareTo(money.amount) >= 1;
 	}
 }

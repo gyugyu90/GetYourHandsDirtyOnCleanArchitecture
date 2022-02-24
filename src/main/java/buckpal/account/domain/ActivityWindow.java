@@ -1,5 +1,7 @@
 package buckpal.account.domain;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import lombok.Getter;
@@ -11,6 +13,10 @@ public class ActivityWindow {
 
 	public ActivityWindow(List<Activity> activities) {
 		this.activities = activities;
+	}
+
+	public ActivityWindow(Activity... activities) {
+		this.activities = new ArrayList<>(Arrays.asList(activities));
 	}
 
 	public Money calculateBalance(Account.AccountId accountId) {
