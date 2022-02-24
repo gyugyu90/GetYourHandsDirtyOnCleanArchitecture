@@ -2,9 +2,16 @@ package buckpal.account.domain;
 
 import java.util.List;
 
+import lombok.Getter;
+
+@Getter
 public class ActivityWindow {
 
 	private List<Activity> activities;
+
+	public ActivityWindow(List<Activity> activities) {
+		this.activities = activities;
+	}
 
 	public Money calculateBalance(Account.AccountId accountId) {
 		Money depositBalance = activities.stream()
@@ -23,4 +30,5 @@ public class ActivityWindow {
 	public void addActivity(Activity activity) {
 		this.activities.add(activity);
 	}
+
 }
